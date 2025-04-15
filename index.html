@@ -30,18 +30,2110 @@
             background-opacity: 0.1;
         }
 
-        /* ... 其他所有樣式 ... */
+        .header-bg {
+            background: linear-gradient(135deg, var(--disney-blue), #0064d2);
+            color: white;
+        }
+
+        .sakura-bg {
+            background-color: var(--sakura-pink);
+            background-opacity: 0.5;
+        }
+
+        .day-header {
+            background: linear-gradient(to right, var(--disney-blue), #5989e5);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            font-weight: bold;
+        }
+
+        .day-content {
+            border: 2px solid var(--disney-blue);
+            border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+            padding: 1.5rem;
+            background-color: white;
+        }
+
+        .hotel-card {
+            border-left: 4px solid var(--disney-red);
+        }
+
+        .attraction-card {
+            border-left: 4px solid var(--disney-blue);
+        }
+
+        .toc-link {
+            color: var(--disney-blue);
+            transition: all 0.3s;
+        }
+
+        .toc-link:hover {
+            color: var(--disney-red);
+            transform: translateX(5px);
+        }
+
+        .disney-button {
+            background-color: var(--disney-blue);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .disney-button:hover {
+            background-color: var(--disney-red);
+            transform: scale(1.05);
+        }
+
+        .map-link {
+            color: #0366d6;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .map-link:hover {
+            text-decoration: underline;
+        }
+
+        .map-link i {
+            margin-right: 5px;
+        }
+
+        .timeline {
+            border-left: 3px solid var(--disney-blue);
+            margin-left: 15px;
+            padding-left: 20px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -29px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid var(--disney-blue);
+        }
+
+        .timeline-item.highlight:before {
+            background-color: var(--disney-red);
+            border: 3px solid var(--disney-red);
+        }
+
+        .shadow-custom {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tip-box {
+            background-color: #fef9e6;
+            border-left: 4px solid #f7d354;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .alert-box {
+            background-color: #ffebe6;
+            border-left: 4px solid var(--disney-red);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .circle-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--disney-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table th {
+            background-color: var(--disney-blue);
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        table tr:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .day-content, .day-header {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Fancy section divider */
+        .divider {
+            height: 4px;
+            background: linear-gradient(to right, var(--disney-blue), var(--sakura-pink), var(--disney-red));
+            margin: 2rem 0;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-button {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .mobile-menu-links a {
+            color: white;
+            font-size: 1.2rem;
+            padding: 0.75rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu-links a:hover {
+            color: var(--sakura-pink);
+        }
+
+        /* Floating Action Button */
+        .fab {
+            display: none;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: var(--disney-blue);
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 3.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 99;
+            transition: all 0.3s;
+        }
+
+        .fab:hover {
+            background-color: var(--disney-red);
+            transform: scale(1.1);
+        }
+
+        /* Responsive improvements */
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .fab {
+                display: block;
+            }
+
+            .timeline {
+                margin-left: 10px;
+                padding-left: 15px;
+            }
+
+            .timeline-item:before {
+                left: -24px;
+            }
+
+            .circle-icon {
+                width: 30px;
+                height: 30px;
+                min-width: 30px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .attraction-card, .hotel-card {
+                padding: 0.75rem;
+            }
+
+            .day-header {
+                padding: 0.5rem 1rem;
+            }
+
+            .day-content {
+                padding: 1rem;
+            }
+
+            .disney-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            /* Improve touch targets */
+            .toc-link, .map-link, .disney-button {
+                padding: 0.5rem;
+                margin: 0.25rem 0;
+            }
+
+            /* Better spacing for mobile */
+            .space-y-1 > * + * {
+                margin-top: 0.5rem !important;
+            }
+
+            .space-y-2 > * + * {
+                margin-top: 0.75rem !important;
+            }
+
+            /* Improved readability */
+            p, li {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            h1 {
+                font-size: 1.75rem !important;
+            }
+
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            h3 {
+                font-size: 1.25rem !important;
+            }
+        }
+
+        /* Quick navigation dots */
+        .quick-nav-dots {
+            display: none;
+            position: fixed;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 98;
+        }
+
+        .quick-nav-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--disney-blue);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .quick-nav-dot.active {
+            background-color: var(--disney-red);
+            transform: scale(1.3);
+        }
+
+        @media (min-width: 1024px) {
+            .quick-nav-dots {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading indicator */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--disney-blue);
+            z-index: 1000;
+        }
+
+        .loading:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--disney-red);
+            animation: loading 2s infinite;
+        }
+
+        @keyframes loading {
+            0% { width: 0; }
+            50% { width: 100%; }
+            100% { width: 0; }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="header-bg py-8 px-4 md:px-8 text-center">
-        <!-- ... 其他所有 HTML 內容 ... -->
+        <div class="container mx-auto">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">東京親子奇幻之旅 2025</h1>
+            <h2 class="text-xl md:text-2xl mb-4">Tokyo Family Magic Journey</h2>
+            <p class="text-lg">兩大兩小 五天四夜 行程企劃書</p>
+        </div>
     </header>
+
+    <!-- Main navigation -->
+    <nav class="bg-white shadow-md py-4 px-4 sticky top-0 z-50 no-print">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-between items-center">
+                <span class="font-bold text-lg text-blue-800">Tokyo 2025</span>
+                <button class="mobile-menu-button md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#overview" class="hover:text-blue-700">行程總覽</a>
+                    <a href="#preparations" class="hover:text-blue-700">行前準備</a>
+                    <a href="#day1" class="hover:text-blue-700">Day 1</a>
+                    <a href="#day2" class="hover:text-blue-700">Day 2</a>
+                    <a href="#day3" class="hover:text-blue-700">Day 3</a>
+                    <a href="#day4" class="hover:text-blue-700">Day 4</a>
+                    <a href="#day5" class="hover:text-blue-700">Day 5</a>
+                    <a href="#transport" class="hover:text-blue-700">交通資訊</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-menu-links">
+            <a href="#overview">行程總覽</a>
+            <a href="#preparations">行前準備</a>
+            <a href="#day1">Day 1</a>
+            <a href="#day2">Day 2</a>
+            <a href="#day3">Day 3</a>
+            <a href="#day4">Day 4</a>
+            <a href="#day5">Day 5</a>
+            <a href="#transport">交通資訊</a>
+            <a href="#hotels">住宿資訊</a>
+            <a href="#attractions">景點資訊</a>
+        </div>
+    </div>
+
+    <!-- Quick navigation dots -->
+    <div class="quick-nav-dots">
+        <div class="quick-nav-dot" data-target="overview"></div>
+        <div class="quick-nav-dot" data-target="preparations"></div>
+        <div class="quick-nav-dot" data-target="day1"></div>
+        <div class="quick-nav-dot" data-target="day2"></div>
+        <div class="quick-nav-dot" data-target="day3"></div>
+        <div class="quick-nav-dot" data-target="day4"></div>
+        <div class="quick-nav-dot" data-target="day5"></div>
+    </div>
+
+    <!-- Floating action button -->
+    <a href="#" class="fab">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Loading indicator -->
+    <div class="loading"></div>
+
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Sidebar - Table of Contents -->
+            <div class="md:col-span-1 bg-white p-6 rounded-lg shadow-md no-print">
+                <h3 class="font-bold text-xl mb-4 text-blue-800">目錄</h3>
+                <ul class="space-y-2">
+                    <li><a href="#overview" class="toc-link">行程總覽</a></li>
+                    <li><a href="#preparations" class="toc-link">行前準備</a></li>
+                    <li class="mt-4 font-bold">行程安排</li>
+                    <li><a href="#day1" class="toc-link">Day 1: 抵達東京、秋葉原初探</a></li>
+                    <li><a href="#day2" class="toc-link">Day 2: 光影藝術、海洋世界與舞濱之夜</a></li>
+                    <li><a href="#day3" class="toc-link">Day 3: 東京迪士尼樂園魔法日</a></li>
+                    <li><a href="#day4" class="toc-link">Day 4: 東京迪士尼海洋 & 夢幻泉鄉探險</a></li>
+                    <li><a href="#day5" class="toc-link">Day 5: 玩具總動員回憶與返程</a></li>
+                    <li class="mt-4 font-bold">實用資訊</li>
+                    <li><a href="#transport" class="toc-link">交通資訊</a></li>
+                    <li><a href="#hotels" class="toc-link">住宿資訊</a></li>
+                    <li><a href="#attractions" class="toc-link">景點資訊</a></li>
+                </ul>
+            </div>
+
+            <!-- Main content area -->
+            <div class="md:col-span-3">
+                <!-- Trip overview section -->
+                <section id="overview" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800">1. 行程總覽</h2>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">旅行日期</h3>
+                                <p>2025年 5月 10日 (週六) 至 5月 14日 (週三) (共5天4夜)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">旅行成員</h3>
+                                <p>大人 2位，小孩 2位 (身高 105cm, 111cm) + 友人 4位 (僅參與 5/10 晚餐)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">目的地</h3>
+                                <p>日本 東京</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">行程重點</h3>
+                                <p>秋葉原探索與燒肉晚餐、teamLab Borderless 光影互動、Maxell Aqua Park 品川水族館、東京迪士尼樂園（含推薦小吃、小飛象、小飛俠天空之旅）、東京迪士尼海洋 (含最新園區「夢幻泉鄉」Fantasy Springs、推薦小吃）、迪士尼主題飯店住宿體驗。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <h3 class="text-xl font-bold mb-4 text-blue-800">航班資訊</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th>行程</th>
+                                    <th>航空公司/航班</th>
+                                    <th>時間</th>
+                                    <th>機場</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>去程</td>
+                                    <td>星宇航空 JX800</td>
+                                    <td>08:30 → 12:40</td>
+                                    <td>桃園 TPE → 東京成田 NRT</td>
+                                </tr>
+                                <tr>
+                                    <td>回程</td>
+                                    <td>星宇航空 JX803</td>
+                                    <td>16:15 → 19:10</td>
+                                    <td>東京成田 NRT → 桃園 TPE</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <h3 class="text-xl font-bold mb-4 text-blue-800">住宿安排</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th>日期</th>
+                                    <th>住宿</th>
+                                    <th>地點</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Day 1: 5/10</td>
+                                    <td>Akihabara Nakagawa Inn</td>
+                                    <td>秋葉原</td>
+                                </tr>
+                                <tr>
+                                    <td>Day 2: 5/11</td>
+                                    <td>舞濱夢幻酒店別館 <br>(Hotel Dream Gate Maihama Annex)</td>
+                                    <td>舞濱</td>
+                                </tr>
+                                <tr>
+                                    <td>Day 3: 5/12</td>
+                                    <td>東京迪士尼海洋夢幻泉鄉大飯店 <br>(Tokyo DisneySea Fantasy Springs Hotel)</td>
+                                    <td>迪士尼度假區</td>
+                                </tr>
+                                <tr>
+                                    <td>Day 4: 5/13</td>
+                                    <td>東京迪士尼度假區玩具總動員飯店 <br>(Tokyo Disney Resort Toy Story Hotel)</td>
+                                    <td>迪士尼度假區</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <h3 class="text-xl font-bold mb-4 text-blue-800">已購票券</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>來回 Skyliner 車票</li>
+                        <li>5/10、5/11 地鐵兩日券 (Tokyo Subway Ticket 48-hour)
+                            <p class="text-sm text-red-600">請注意此券僅適用於 Tokyo Metro 及都營地下鐵，不適用於 JR 線。</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Trip preparations section -->
+                <section id="preparations" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800">2. 行前準備與注意事項</h2>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-passport"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">證件、保險、貨幣、網路</h3>
+                                <p>確認所有護照、旅遊保險、日圓兌換以及網路連線方案皆已備妥。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-subway"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">交通卡</h3>
+                                <p>除地鐵券外，建議仍準備 Suica/Pasmo 卡，用於搭乘 JR 線及地鐵券範圍外的交通，或進行小額支付。可在抵達成田機場時購買並儲值。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">迪士尼App</h3>
+                                <p class="font-bold text-red-600">【極重要】</p>
+                                <p>全員下載註冊，熟悉操作 (預約等候卡、報名抽選、DPA購買等)。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-suitcase-rolling"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">行李轉送計畫</h3>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>Day 2 (秋葉原→舞濱): <span class="font-bold">【調整】</span>Check-out 後先將行李寄放車站置物櫃，晚上再領取前往舞濱飯店 (詳見 Day 2 行程)。
+                                        <p class="text-sm">或仍可考慮使用宅急便服務，但需注意 Day 2 行程緊湊，收送時間需配合。</p>
+                                    </li>
+                                    <li>Day 3 (舞濱→夢幻泉鄉): 沿用原計畫，Check-out 時洽詢飯店轉送。</li>
+                                    <li>Day 4 (夢幻泉鄉→玩具總動員): 沿用原計畫，Check-out 時洽詢飯店轉送。</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">天氣、穿著、備品</h3>
+                                <p>5月東京平均氣溫約16-22°C，準備舒適衣物，舒適鞋襪及常備藥品。建議攜帶薄外套應對早晚溫差。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">預約確認</h3>
+                                <p>再次確認所有預訂項目：機票、飯店、teamLab Borderless (11:30)、迪士尼餐廳、迪士尼設施 DPA/預約時間、玩具總動員飯店早餐。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="circle-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">緊急聯絡</h3>
+                                <p>記錄相關資訊，包括旅館電話、台灣駐日代表處、醫療機構等。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-box mt-6">
+                        <h3 class="font-bold text-red-600">重要提醒</h3>
+                        <p>出發前確認護照有效期至少需要6個月以上，且入境日本需確認是否需要申請簽證或使用免簽證入境。</p>
+                    </div>
+                </section>
+
+                <!-- Day 1 -->
+                <section id="day1" class="mb-8">
+                    <div class="day-header">
+                        <h2 class="text-2xl">Day 1：2025/5/10 (週六) - 抵達東京、秋葉原初探與燒肉饗宴</h2>
+                    </div>
+                    <div class="day-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">05:00-05:30 (台灣時間)</h3>
+                                <p>從竹北住所出發，前往桃園國際機場 (TPE)。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">06:00-07:00</h3>
+                                <p>抵達機場，辦理星宇航空 JX800 報到及行李托運。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">08:30</h3>
+                                <p>搭乘 JX800 班機起飛。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">12:40 (日本時間)</h3>
+                                <p>抵達東京成田國際機場 (NRT)。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">12:40-14:00</h3>
+                                <p>辦理入境審查、提領行李、海關檢查。兌換/領取已購買的 Skyliner 車票及地鐵兩日券。購買 Suica/Pasmo 卡並儲值 (備用)。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">14:00-15:30</h3>
+                                <p><span class="font-bold">【交通更新】</span>搭乘 Keisei Skyliner 前往「日暮里」站 (約 36 分鐘)。</p>
+                                <p>抵達日暮里站後，轉乘 JR 山手線 或 京濱東北線 前往「秋葉原」站 (約 5 分鐘)。</p>
+                                <p class="text-sm text-red-600">此段 JR 車資需使用 Suica/Pasmo 卡支付，地鐵券不適用。</p>
+
+                                <div class="mt-3">
+                                    <a href="https://www.google.com/maps/dir/成田國際機場/秋葉原站/@35.6916382,140.0199943,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x602280b7092ea031:0x516f1b5880464c1!2m2!1d140.3863889!2d35.7730556!1m5!1m1!1s0x60188ec3e5b28c25:0x9e7417fc8e91a73e!2m2!1d139.7733333!2d35.6983333!3e3" target="_blank" class="map-link">
+                                        <i class="fas fa-map-marker-alt"></i> 成田機場至秋葉原的路線地圖
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">15:30-16:30</h3>
+                                <p>抵達 Akihabara Nakagawa Inn，辦理 Check-in，稍作休息。</p>
+
+                                <div class="hotel-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">住宿資訊: Akihabara Nakagawa Inn</h4>
+                                    <p>地址: 〒110-0005 Tokyo, Taito City, 3, 東京都 台東区上野5-3-7 ETビル</p>
+                                    <p>電話: +81 90-1219-8349</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/Akihabara+Nakagawa+Inn/@35.6983333,139.7733333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">16:30-18:30</h3>
+                                <p>秋葉原自由探索 (使用地鐵兩日券或步行)。</p>
+                                <ul class="list-disc pl-6 space-y-2 mt-2">
+                                    <li>參觀大型電器行 (Yodobashi Camera / Bic Camera)</li>
+                                    <li>逛動漫、公仔模型店</li>
+                                    <li>體驗電子遊樂中心</li>
+                                </ul>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">秋葉原推薦景點</h4>
+                                    <ul class="list-disc pl-6 space-y-2">
+                                        <li>Yodobashi Akiba - 巨大的電器賣場，有九層樓各種電子商品</li>
+                                        <li>Animate Akihabara - 著名的動漫專賣店</li>
+                                        <li>Radio Kaikan - 各式動漫、電玩、模型的集合商場</li>
+                                        <li>SEGA Akihabara - 多層樓的電子遊戲場</li>
+                                    </ul>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/秋葉原電器街/@35.6983333,139.7733333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">18:30-20:30</h3>
+                                <p>晚餐 - 秋葉原燒肉 (共8人)。</p>
+                                <p class="font-bold text-red-600">【重要】 8人用餐務必提前預約。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">推薦燒肉餐廳</h4>
+                                    <ul class="list-disc pl-6 space-y-2">
+                                        <li>YAKINIKU LIKE AKIHABARA DENKIGAI - 平價燒肉，座位舒適</li>
+                                        <li>Yakiniku Motoyama Akihabara Ten - 高品質和牛燒肉</li>
+                                        <li>Taishu Horumon Yakiniku Kemuriki Kanda Ten - 有特色的內臟燒肉</li>
+                                    </ul>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/秋葉原燒肉+肉屋の台所/@35.6983333,139.7733333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">20:30</h3>
+                                <p>與友人道別，回飯店休息。</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-box mt-6">
+                            <h3 class="font-bold">Day 1 小貼士</h3>
+                            <ul class="list-disc pl-6 space-y-1">
+                                <li>從成田機場購買 Suica/Pasmo 卡可省去之後的排隊時間，非常方便</li>
+                                <li>秋葉原是電器與動漫愛好者的天堂，建議規劃好想逛的店家</li>
+                                <li>晚餐建議事先了解日本燒肉店的點餐方式，避免溝通障礙</li>
+                                <li>注意晚餐時間勿太晚，以便適應時差及第二天的行程</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Day 2 -->
+                <section id="day2" class="mb-8">
+                    <div class="day-header">
+                        <h2 class="text-2xl">Day 2：2025/5/11 (週日) - 光影藝術、海洋世界與舞濱之夜</h2>
+                    </div>
+                    <div class="day-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">08:00-09:00</h3>
+                                <p>飯店附近或便利商店享用早餐。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">09:00-09:30</h3>
+                                <p>辦理 Check-out。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">09:30-10:30</h3>
+                                <p><span class="font-bold">【行李處理】</span> 從「秋葉原」站搭乘 JR 京濱東北線或山手線 前往<strong>「品川」站</strong> (約 20 分鐘)。</p>
+                                <p class="text-sm text-red-600">此段 JR 車資需用 Suica/Pasmo。</p>
+                                <p>抵達品川站後，尋找置物櫃 (Coin Locker)，將大件行李暫時寄放。(建議拍照記錄置物櫃位置及密碼/鑰匙)</p>
+
+                                <div class="mt-3">
+                                    <a href="https://www.google.com/maps/dir/秋葉原站/品川站/@35.6666667,139.7,12z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x60188ec3e5b28c25:0x9e7417fc8e91a73e!2m2!1d139.7733333!2d35.6983333!1m5!1m1!1s0x601856b0c4b1ba5f:0x2b3a2d5e346037a8!2m2!1d139.7383333!2d35.6283333!3e3" target="_blank" class="map-link">
+                                        <i class="fas fa-map-marker-alt"></i> 秋葉原至品川站路線
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">10:30-11:15</h3>
+                                <p>從「品川」站搭乘地鐵前往 teamLab Borderless 所在地 (麻布台 Hills)。</p>
+                                <p>建議路線：</p>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>從品川搭乘 JR 山手線至「新橋」站，轉乘 東京Metro 銀座線 至「虎ノ門ヒルズ」站，或</li>
+                                    <li>從品川搭乘 都營淺草線 至「大門」站，轉乘 都營大江戶線 至「赤羽橋」站，再步行前往。(請使用 地鐵兩日券)</li>
+                                    <li>或搭乘 JR 山手線至「田町」站，轉乘 都營三田線 至「御成門」站。</li>
+                                </ul>
+                                <p>請預留地鐵轉乘及步行至麻布台 Hills 的時間。</p>
+
+                                <div class="mt-3">
+                                    <a href="https://www.google.com/maps/search/teamLab+Borderless/@35.65,139.7,17z?entry=ttu" target="_blank" class="map-link">
+                                        <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                    </a>
+                                    <div>
+                                        <a href="https://www.teamlab.art/e/borderless_azabudai/" target="_blank" class="disney-button">
+                                            <i class="fas fa-globe"></i> 官方網站
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">11:30-14:30</h3>
+                                <p><span class="font-bold">【預約 11:30】</span>參觀 teamLab Borderless (麻布台 Hills)。</p>
+                                <p>(預計停留 2.5-3 小時，盡情探索無邊界的世界)</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">teamLab Borderless: MORI Building DIGITAL ART MUSEUM</h4>
+                                    <p>地址: Japan, 〒106-0041 Tokyo, Minato City, Toranomon, 5 Chome−９ Azabudai Hills Garden Plaza B, B1</p>
+                                    <p>電話: +81 3-6230-9666</p>
+                                    <p>門票: 約 $25.10 USD/人</p>
+                                    <p>特色: 沒有界限的沉浸式數位藝術博物館，結合光影與互動技術創造出超越現實的奇幻空間，是家庭必訪的視覺盛宴。</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/MORI+Building+DIGITAL+ART+MUSEUM+teamLab+Borderless/@35.65,139.7,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.teamlab.art/jp/e/tokyo/" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">14:30-15:00</h3>
+                                <p>從 teamLab Borderless 搭乘地鐵返回<strong>「品川」站</strong>。(使用地鐵兩日券，路線同上午反向)</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">15:00-17:30</h3>
+                                <p><span class="font-bold">【新行程】</span>前往 Maxell Aqua Park 品川水族館。</p>
+                                <p>(位於品川王子大飯店內，從品川站高輪口步行約 2 分鐘)。欣賞聲光效果十足的海豚秀及各種海洋生物展示。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">Maxell Aqua Park Shinagawa</h4>
+                                    <p>地址: Japan, 〒108-8611 Tokyo, Minato City, Takanawa, 4 Chome−１０−３０ 品川プリンスホテル内</p>
+                                    <p>電話: +81 3-5421-1111</p>
+                                    <p>門票: 約 $17 USD/人</p>
+                                    <p>開放時間: 10:00 AM - 8:00 PM</p>
+                                    <p>特色: 結合聲光效果的現代化水族館，海豚表演極具觀賞性，適合全家欣賞。</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/Maxell+Aqua+Park+Shinagawa/@35.65,139.7,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.aqua-park.jp/en/aqua/index.html" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">17:30-18:00</h3>
+                                <p>回到品川站，領取寄放的行李。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">18:00-19:00</h3>
+                                <p>從「品川」站搭乘 JR 前往「舞濱」站。</p>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>搭乘 JR 山手線 或 京濱東北線 至<strong>「東京」站</strong>。</li>
+                                    <li>於東京站內，跟隨指示步行較長距離轉乘 JR 京葉線 或 武藏野線 前往「舞濱」站 (約 15 分鐘車程)。</li>
+                                </ul>
+                                <p class="text-sm text-red-600">此段 JR 車資需使用 Suica/Pasmo 卡支付。</p>
+
+                                <div class="mt-3">
+                                    <a href="https://www.google.com/maps/dir/品川站/舞濱站/@35.65,139.7,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x601856b0c4b1ba5f:0x2b3a2d5e346037a8!2m2!1d139.7383333!2d35.6283333!1m5!1m1!1s0x6018f3c0c0b9a9a9:0x2b3a2d5e346037a8!2m2!1d139.8833333!2d35.6333333!3e3" target="_blank" class="map-link">
+                                        <i class="fas fa-map-marker-alt"></i> 品川至舞濱路線
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">19:00-19:30</h3>
+                                <p>抵達舞濱站，前往「舞濱夢幻酒店別館」辦理 Check-in。</p>
+
+                                <div class="hotel-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">住宿資訊: 舞濱夢幻酒店別館 (Hotel Dream Gate Maihama Annex)</h4>
+                                    <p>地址: Japan, 〒279-0031 Chiba, Urayasu, Maihama, 26-5 ホテルドリームゲート舞浜アネックス</p>
+                                    <p>電話: +81 47-351-0180</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/舞濱夢幻酒店別館/@35.6333333,139.8833333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">晚餐</h3>
+                                <p>於舞濱站旁「伊克斯皮兒莉 (Ikspiari)」商場或飯店附近餐廳用餐。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">伊克斯皮兒莉 (Ikspiari)</h4>
+                                    <p>地址: 1-4 Maihama, Urayasu, Chiba 279-8529, Japan</p>
+                                    <p>特色: 迪士尼度假區內的大型購物中心，有豐富的餐飲選擇和商店。</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/伊克斯皮兒莉+Ikspiari/@35.6333333,139.8833333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.ikspiari.com/en/" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">睡前</h3>
+                                <p>確認明日迪士尼樂園入園注意事項，準備好 App。</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-box mt-6">
+                            <h3 class="font-bold">Day 2 小貼士</h3>
+                            <ul class="list-disc pl-6 space-y-1">
+                                <li>teamLab Borderless 是日本最熱門的互動藝術展，建議提前了解館內精彩區域</li>
+                                <li>品川站的置物櫃可能在尖峰時段供不應求，建議早些到達找尋適合大小的櫃子</li>
+                                <li>水族館的海豚表演有固定時段，建議查詢當日時間表</li>
+                                <li>舞濱站至飯店徒步可達，但有行李時可考慮搭乘短程計程車</li>
+                                <li>Ikspiari 商場餐廳選擇多元，從平價到高級都有，可依照預算選擇</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Day 3 -->
+                <section id="day3" class="mb-8">
+                    <div class="day-header">
+                        <h2 class="text-2xl">Day 3：2025/5/12 (週一) - 東京迪士尼樂園魔法日 (TDL)</h2>
+                    </div>
+                    <div class="day-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">07:30-08:30</h3>
+                                <p>飯店或伊克斯皮兒莉享用早餐。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">08:30</h3>
+                                <p>辦理 Check-out，並至櫃檯辦理行李轉送至「夢幻泉鄉大飯店」。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">08:30-09:00</h3>
+                                <p>前往東京迪士尼樂園 (Tokyo Disneyland)。建議提早抵達排隊等候開園。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">東京迪士尼樂園 (Tokyo Disneyland)</h4>
+                                    <p>地址: 1-1 Maihama, Urayasu, Chiba 279-0031, Japan</p>
+                                    <p>開園時間: 通常為上午9:00 (請確認官網當日時間)</p>
+                                    <p>特色: 東京迪士尼度假區的第一個主題樂園，共有七個主題園區，提供各種經典迪士尼體驗。</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/東京迪士尼樂園/@35.6333333,139.8833333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">開園後 - 11:20</h3>
+                                <p><span class="font-bold">第一目標: 衝刺夢幻樂園：</span></p>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>體驗 小熊維尼獵蜜記</li>
+                                    <li><span class="font-bold">【新增】</span>體驗 小飛俠天空之旅 (Peter Pan's Flight)</li>
+                                    <li><span class="font-bold">【新增】</span>體驗 小飛象 (Dumbo the Flying Elephant)</li>
+                                    <li>視排隊狀況，可考慮使用 DPA 或預約等候卡 (若適用)</li>
+                                </ul>
+                                <p><span class="font-bold">第二目標:</span> 前往明日樂園，體驗 怪獸電力公司「迷藏巡遊車」。</p>
+                                <p>活用 Tokyo Disney Resort App 查看等待時間，彈性調整順序。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">11:20-12:20</h3>
+                                <p><span class="font-bold">【預約】</span>北齋餐廳 (Restaurant Hokusai) (世界市集) 用餐。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">北齋餐廳 (Restaurant Hokusai)</h4>
+                                    <p>地址: 位於東京迪士尼樂園世界市集區域</p>
+                                    <p>特色: 提供日式料理，環境優雅，需預約</p>
+                                    <p>價格範圍: 2,000円 - 3,000円/人</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">12:20-14:00</h3>
+                                <p>繼續遊園或稍作休息，逛商店。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">14:00</h3>
+                                <p><span class="font-bold">【預約】</span>美女與野獸「城堡奇緣」 (夢幻樂園) 體驗。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">美女與野獸「城堡奇緣」(Enchanted Tale of Beauty and the Beast)</h4>
+                                    <p>位置: 夢幻樂園 (Fantasyland)</p>
+                                    <p>特色: 東京迪士尼樂園最新且最受歡迎的一個遊樂設施，使用最先進的技術和動畫人偶，帶賓客進入電影場景</p>
+                                    <p>建議: 此設施極為熱門，強烈建議使用預約等候卡或迪士尼尊享卡</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">14:30-18:30</h3>
+                                <p>探索其他園區與品嚐小吃 (西部樂園、動物天地、探險樂園等)</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">推薦必吃小吃</h4>
+                                    <ul class="list-disc pl-6 space-y-1">
+                                        <li>迪士尼特色爆米花 (多種口味，收藏桶造型精美)</li>
+                                        <li>米奇造型餅乾冰淇淋三明治</li>
+                                        <li>萬聖節/季節限定特色甜點</li>
+                                        <li>日式咖哩飯 (位於動物天地區域)</li>
+                                        <li>米奇造型麻糬饅頭 (位於世界市集)</li>
+                                        <li>蜂蜜檸檬冰茶 (位於探險樂園)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">18:30-19:15</h3>
+                                <p>尋找觀賞夜間遊行的合適位置。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">19:15</h3>
+                                <p>觀賞 東京迪士尼樂園電子大遊行～夢之光 (以當日 App 公告為準)。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">遊行後-20:15</h3>
+                                <p>移動至灰姑娘城堡前廣場附近，準備觀賞煙火。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">20:15</h3>
+                                <p>觀賞 迪士尼炫彩夜空 煙火表演 (可能因天氣取消)。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">20:30後</h3>
+                                <p>離開樂園，搭乘迪士尼度假區線單軌電車至「Bayside Station」，轉乘接駁巴士或步行前往「東京迪士尼海洋夢幻泉鄉大飯店」。</p>
+                                <div class="mt-3">
+                                    <a href="https://www.google.com/maps/dir/東京迪士尼樂園/東京迪士尼海洋夢幻泉鄉大飯店/@35.65,139.7,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x6018f3c0c0b9a9a9:0x2b3a2d5e346037a8!2m2!1d139.8833333!2d35.6333333!1m5!1m1!1s0x6018f3c0c0b9a9a9:0x2b3a2d5e346037a8!2m2!1d139.8833333!2d35.6333333!3e3" target="_blank" class="map-link">
+                                        <i class="fas fa-map-marker-alt"></i> 迪士尼樂園至夢幻泉鄉大飯店路線
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">21:00-21:30</h3>
+                                <p>辦理 Check-in (確認行李已送達)。</p>
+
+                                <div class="hotel-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">住宿資訊: 東京迪士尼海洋夢幻泉鄉大飯店 (Tokyo DisneySea Fantasy Springs Hotel)</h4>
+                                    <p>地址: Japan, 〒279-8526 Chiba, Urayasu, Maihama, 1-2 東京ディズニーシー・ファンタジースプリングスホテル</p>
+                                    <p>電話: +81 47-305-8888</p>
+                                    <p>特色: 2024年新開幕的迪士尼奢華主題飯店，直接連接迪士尼海洋的新園區「夢幻泉鄉」</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/東京迪士尼海洋夢幻泉鄉大飯店/@35.6333333,139.8833333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box mt-6">
+                            <h3 class="font-bold">Day 3 小貼士</h3>
+                            <ul class="list-disc pl-6 space-y-1">
+                                <li>東京迪士尼樂園在平日通常人潮較少，可以更輕鬆體驗各項設施</li>
+                                <li>行李轉送是迪士尼飯店的特色服務，非常方便，提前一晚確認轉送事宜</li>
+                                <li>使用迪士尼度假區App預約等候卡可以節省排隊時間</li>
+                                <li>迪士尼尊享卡(Disney Premier Access)可能需要額外付費，但可以優先體驗熱門設施</li>
+                                <li>夜間遊行和煙火表演需要提前找好位置，建議至少提前30-45分鐘</li>
+                                <li>遊園時依時令穿著舒適鞋襪，避免腳部疲勞</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Day 4 -->
+                <section id="day4" class="mb-8">
+                    <div class="day-header">
+                        <h2 class="text-2xl">Day 4：2025/5/13 (週二) - 東京迪士尼海洋 & 夢幻泉鄉探險 (TDS)</h2>
+                    </div>
+                    <div class="day-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">06:30-07:30</h3>
+                                <p><span class="font-bold">【預約】</span>夢幻泉鄉餐廳 (Fantasy Springs Restaurant) 享用早餐。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">07:45</h3>
+                                <p>利用飯店住客福利，前往夢幻泉鄉入口，準備 提早15分鐘入園 (Happy Entry)。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">提早入園時段 (Happy Entry)</h3>
+                                <p><span class="font-bold">【注意】</span> 安娜與艾莎的冰雪旅程 維修不開放。</p>
+                                <p><span class="font-bold">優先衝刺:</span> 奇妙仙子妙妙小車。</p>
+                                <p>在夢幻泉鄉拍照。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">夢幻泉鄉 (Fantasy Springs)</h4>
+                                    <p>位置: 東京迪士尼海洋第八個主題園區</p>
+                                    <p>特色: 2024年新開幕的園區，結合了《冰雪奇緣》、《魔髮奇緣》及《小飛俠》三個童話故事的世界</p>
+                                    <p>包含: 冰雪王國、樂佩公主森林、小飛俠夢幻島三個區域</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/東京迪士尼海洋/@35.6333333,139.8833333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">正式開園後 - 11:00</h3>
+                                <p>探索夢幻泉鄉，查看 App 等待時間。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">11:00</h3>
+                                <p><span class="font-bold">【預約】</span>小飛俠夢幻島歷險記 體驗。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">小飛俠夢幻島歷險記 (Peter Pan's Never Land Adventure)</h4>
+                                    <p>位置: 夢幻泉鄉 - 小飛俠夢幻島區域</p>
+                                    <p>特色: 最新互動式3D遊樂設施，乘客可以與提克鐘和小飛俠一起在高空飛行，去救被虎克船長抓走的約翰</p>
+                                    <p>建議: 此為熱門設施，可使用預約等候卡或迪士尼尊享卡</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">11:30-12:10</h3>
+                                <p>前往樂佩公主森林。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">12:10-13:10</h3>
+                                <p><span class="font-bold">【預約】</span>醜小鴨小館 用餐。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">醜小鴨小館</h4>
+                                    <p>位置: 夢幻泉鄉 - 樂佩公主森林區域</p>
+                                    <p>特色: 以童話《醜小鴨》為主題的餐廳，提供美味西式料理</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">13:10-14:00</h3>
+                                <p>在樂佩公主森林附近活動。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">14:00</h3>
+                                <p><span class="font-bold">【預約】</span>樂佩公主天燈盛會 體驗。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">樂佩公主天燈盛會 (Rapunzel's Lantern Festival)</h4>
+                                    <p>位置: 夢幻泉鄉 - 樂佩公主森林區域</p>
+                                    <p>特色: 以迪士尼電影《魔髮奇緣》為主題的互動式遊樂設施，乘客可以乘船欣賞天燈盛會</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">14:30-16:30</h3>
+                                <p>往美國海濱方向移動，探索與品嚐小吃 (神秘島、阿拉伯海岸、美人魚礁湖等)</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">推薦必吃小吃</h4>
+                                    <ul class="list-disc pl-6 space-y-1">
+                                        <li>吉拉多香蕉脆餅 (阿拉伯海岸區域)</li>
+                                        <li>達菲造型饅頭 (美國海濱區域)</li>
+                                        <li>海鮮可麗餅 (地中海港灣區域)</li>
+                                        <li>海洋塩味爆米花 (美國海濱區域)</li>
+                                        <li>鮪魚醬烤餅 (神秘島區域)</li>
+                                        <li>夢幻泉鄉限定餅乾 (夢幻泉鄉)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">16:30-17:00</h3>
+                                <p>抵達美國海濱的玩具總動員區。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">17:00</h3>
+                                <p><span class="font-bold">【預約】</span>玩具總動員瘋狂遊戲屋！ 體驗。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">玩具總動員瘋狂遊戲屋！(Toy Story Mania!)</h4>
+                                    <p>位置: 美國海濱區域</p>
+                                    <p>特色: 互動式3D遊戲，乘客可以戴上3D眼鏡，通過各種趣味射擊遊戲獲得分數</p>
+                                    <p>建議: 此為熱門設施，建議使用預約等候卡或迪士尼尊享卡</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">17:30-19:00</h3>
+                                <p>於美國海濱自由活動。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">19:00-19:15</h3>
+                                <p>在地中海港灣尋找觀賞水上表演的位置。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">19:15</h3>
+                                <p>觀賞 堅信！～夢想之海～ 水上燈光大秀。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">20:15</h3>
+                                <p>觀賞 迪士尼炫彩夜空 煙火表演。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">20:30後</h3>
+                                <p>離開樂園。辦理 Check-out 行李轉送至「玩具總動員飯店」。搭乘迪士尼度假區線單軌電車至「Bayside Station」，轉搭接駁巴士或步行前往。</p>
+                                <div class="mt-3">
+                                    <a href="https://www.google.com/maps/dir/東京迪士尼海洋/東京迪士尼度假區玩具總動員飯店/@35.65,139.7,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x6018f3c0c0b9a9a9:0x2b3a2d5e346037a8!2m2!1d139.8833333!2d35.6333333!1m5!1m1!1s0x6018f3c0c0b9a9a9:0x2b3a2d5e346037a8!2m2!1d139.8833333!2d35.6333333!3e3" target="_blank" class="map-link">
+                                        <i class="fas fa-map-marker-alt"></i> 迪士尼海洋至玩具總動員飯店路線
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">21:00-21:30</h3>
+                                <p>抵達「東京迪士尼度假區玩具總動員飯店」，辦理 Check-in (確認行李已送達)。</p>
+
+                                <div class="hotel-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">住宿資訊: 東京迪士尼度假區玩具總動員飯店 (Tokyo DisneyResort Toy Story Hotel)</h4>
+                                    <p>地址: １-47 Maihama, Urayasu, Chiba 279-8506, Japan</p>
+                                    <p>電話: +81 47-305-5555</p>
+                                    <p>特色: 以迪士尼電影《玩具總動員》為主題的飯店，處處充滿玩具的設計元素，讓賓客感受玩具世界的樂趣</p>
+                                    <div class="mt-2 space-y-2">
+                                        <a href="https://www.google.com/maps/search/東京迪士尼度假區玩具總動員飯店/@35.6333333,139.8833333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box mt-6">
+                            <h3 class="font-bold">Day 4 小貼士</h3>
+                            <ul class="list-disc pl-6 space-y-1">
+                                <li>夢幻泉鄉是迪士尼海洋的最新園區，非常熱門，善用飯店提供的提早入園特權</li>
+                                <li>夢幻泉鄉內常有角色互動，可透過App查詢出現時間</li>
+                                <li>迪士尼海洋的設施相對迪士尼樂園更刺激，適合年齡較大的兒童和成人</li>
+                                <li>注意查看當日表演時間表，以免錯過精彩表演</li>
+                                <li>夜間的煙火表演和水上表演是必看亮點，建議提前佔位</li>
+                                <li>玩具總動員飯店的住客可享受專屬的交通服務，可向櫃檯詢問</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Day 5 -->
+                <section id="day5" class="mb-8">
+                    <div class="day-header">
+                        <h2 class="text-2xl">Day 5：2025/5/14 (週三) - 玩具總動員回憶與 Skyliner 返程</h2>
+                    </div>
+                    <div class="day-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">08:30-09:30</h3>
+                                <p><span class="font-bold">【預約】</span>熊抱哥花園咖啡廳 享用早餐。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">熊抱哥花園咖啡廳 (Lotso Garden Cafe)</h4>
+                                    <p>位置: 玩具總動員飯店內</p>
+                                    <p>特色: 以《玩具總動員3》中的熊抱哥為主題的咖啡廳，提供豐富的自助式早餐</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">09:30-10:30</h3>
+                                <p>在飯店中庭拍照留念，逛逛飯店商店。</p>
+
+                                <div class="attraction-card p-4 bg-gray-50 mt-3 rounded-lg">
+                                    <h4 class="font-bold text-blue-800">玩具總動員飯店特色景點</h4>
+                                    <ul class="list-disc pl-6 space-y-1">
+                                        <li>Toy Friends Square - 與玩具朋友合影的中庭廣場</li>
+                                        <li>飯店大廳的巨型玩具裝飾</li>
+                                        <li>Gift Planet - 玩具總動員主題商店</li>
+                                        <li>飯店內各處的玩具總動員角色裝飾</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">10:30-11:00</h3>
+                                <p>返回房間整理行李，辦理 Check-out。可將行李暫存於飯店櫃檯。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">11:00-12:00</h3>
+                                <p>返回玩具總動員飯店領取行李。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">12:00-14:00</h3>
+                                <p><span class="font-bold">【交通更新】</span>從玩具總動員飯店前往成田機場 (NRT) 的詳細路線：</p>
+
+                                <div class="bg-white p-4 rounded-lg shadow-sm mt-3">
+                                    <h4 class="font-bold text-blue-800 mb-3">第一段：玩具總動員飯店 → 舞濱站</h4>
+                                    <ol class="list-decimal pl-6 space-y-2">
+                                        <li>從飯店搭乘免費接駁巴士或步行至 Bayside Station (約5-10分鐘)</li>
+                                        <li>搭乘迪士尼度假區線單軌電車至舞濱站 (約5分鐘，260日圓)</li>
+                                    </ol>
+                                </div>
+
+                                <div class="bg-white p-4 rounded-lg shadow-sm mt-3">
+                                    <h4 class="font-bold text-blue-800 mb-3">第二段：舞濱站 → 東京站</h4>
+                                    <ol class="list-decimal pl-6 space-y-2">
+                                        <li>在舞濱站搭乘 JR 京葉線（往東京方向）至東京站 (約15-20分鐘，320日圓)</li>
+                                        <li>抵達東京站後，跟隨「JR線轉乘」指示牌步行至山手線/京濱東北線月台 (約7-10分鐘步行)</li>
+                                        <li class="text-red-600">注意：東京站內轉乘距離較長，請預留足夠時間</li>
+                                    </ol>
+                                </div>
+
+                                <div class="bg-white p-4 rounded-lg shadow-sm mt-3">
+                                    <h4 class="font-bold text-blue-800 mb-3">第三段：東京站 → 日暮里站</h4>
+                                    <ol class="list-decimal pl-6 space-y-2">
+                                        <li>搭乘 JR 山手線（往上野/日暮里方向）或 JR 京濱東北線 至日暮里站 (約10分鐘，170日圓)</li>
+                                        <li>抵達日暮里站後，跟隨「京成 Skyliner」指示牌步行至京成日暮里站 (約3-5分鐘)</li>
+                                    </ol>
+                                </div>
+
+                                <div class="bg-white p-4 rounded-lg shadow-sm mt-3">
+                                    <h4 class="font-bold text-blue-800 mb-3">第四段：日暮里站 → 成田機場</h4>
+                                    <ol class="list-decimal pl-6 space-y-2">
+                                        <li>搭乘 Keisei Skyliner 至成田機場第一航廈 (約36分鐘)</li>
+                                        <li>抵達後跟隨指示前往星宇航空櫃檯</li>
+                                    </ol>
+                                </div>
+
+                                <div class="alert-box mt-4">
+                                    <h4 class="font-bold">重要提醒</h4>
+                                    <ul class="list-disc pl-6 space-y-2">
+                                        <li>全程車資：
+                                            <ul class="list-disc pl-6 mt-1">
+                                                <li>單軌電車：260日圓</li>
+                                                <li>JR 舞濱→東京：320日圓</li>
+                                                <li>JR 東京→日暮里：170日圓</li>
+                                                <li>Skyliner：2,570日圓（使用預購票）</li>
+                                            </ul>
+                                        </li>
+                                        <li>建議預留至少2小時交通時間：
+                                            <ul class="list-disc pl-6 mt-1">
+                                                <li>飯店→舞濱：15分鐘</li>
+                                                <li>舞濱→東京：20分鐘</li>
+                                                <li>東京站內轉乘：10分鐘</li>
+                                                <li>東京→日暮里：10分鐘</li>
+                                                <li>轉乘 Skyliner：5分鐘</li>
+                                                <li>日暮里→成田：36分鐘</li>
+                                                <li>機場內移動：15-20分鐘</li>
+                                            </ul>
+                                        </li>
+                                        <li>所有 JR 路線及單軌電車車資需使用 Suica/Pasmo 卡支付</li>
+                                        <li>Skyliner 需使用專用車票（建議提前購買）</li>
+                                    </ul>
+                                </div>
+
+                                <div class="mt-3">
+                                    <a href="https://www.google.com/maps/dir/舞濱站/成田國際機場/@35.65,139.7,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x6018f3c0c0b9a9a9:0x2b3a2d5e346037a8!2m2!1d139.8833333!2d35.6333333!1m5!1m1!1s0x602280b7092ea031:0x516f1b5880464c1!2m2!1d140.3863889!2d35.7730556!3e3" target="_blank" class="map-link">
+                                        <i class="fas fa-map-marker-alt"></i> 查看完整路線地圖
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">14:00-14:30</h3>
+                                <p>抵達成田機場第一航廈。尋找星宇航空櫃檯，辦理 JX803 報到及行李托運。</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <h3 class="font-bold text-lg">14:30-15:00</h3>
+                                <p>出境審查、安全檢查。進入管制區後可逛免稅店。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">15:00-15:30</h3>
+                                <p>抵達成田機場第一航廈。尋找星宇航空櫃檯，辦理 JX803 報到及行李托運。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">15:30-16:00</h3>
+                                <p>出境審查、安全檢查。進入管制區後可逛免稅店。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">16:15</h3>
+                                <p>搭乘星宇航空 JX803 班機起飛，返回台灣。</p>
+                            </div>
+
+                            <div class="timeline-item highlight">
+                                <h3 class="font-bold text-lg">19:10 (台灣時間)</h3>
+                                <p>預計抵達桃園國際機場 (TPE)，結束愉快的東京親子之旅！</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-box mt-6">
+                            <h3 class="font-bold">Day 5 小貼士</h3>
+                            <ul class="list-disc pl-6 space-y-1">
+                                <li>Check-out 前在飯店拍照留念，玩具總動員飯店有許多精心設計的角落</li>
+                                <li>Ikspiari商場有許多紀念品店和餐廳，是最後採買的好地方</li>
+                                <li>前往成田機場需轉乘多次，請預留充足時間</li>
+                                <li>日暮里站的 Skyliner 轉乘更便捷，若時間充裕建議選擇此站</li>
+                                <li>免稅店購物需出示護照，若有使用退稅服務，請妥善保管相關單據</li>
+                                <li>機場內仍有許多日本限定商品，可利用候機時間選購</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Transport information -->
+                <section id="transport" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800">交通資訊</h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">1. Keisei Skyliner</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <p>成田機場至市區最快速的交通方式，約41分鐘可到達上野。</p>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>成田機場至上野：41分鐘</li>
+                                        <li>成田機場至日暮里：36分鐘</li>
+                                        <li>票價：約2,570日圓/人</li>
+                                        <li>營運時間：早上6:00至晚上11:00</li>
+                                    </ul>
+                                    <div class="mt-3">
+                                        <a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/us/" target="_blank" class="disney-button">
+                                            <i class="fas fa-external-link-alt"></i> Skyliner官方網站
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead>
+                                            <tr>
+                                                <th>從成田機場出發時間</th>
+                                                <th>抵達日暮里時間</th>
+                                                <th>抵達上野時間</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>13:00</td>
+                                                <td>13:36</td>
+                                                <td>13:41</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13:30</td>
+                                                <td>14:06</td>
+                                                <td>14:11</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:00</td>
+                                                <td>14:36</td>
+                                                <td>14:41</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">2. 東京地鐵兩日券 (Tokyo Subway Ticket 48-hour)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <p>東京地鐵兩日券可無限次搭乘 Tokyo Metro及都營地下鐵，但不適用於 JR 線。</p>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>成人票價：1,200日圓</li>
+                                        <li>兒童票價：600日圓</li>
+                                        <li>有效期限：從首次使用開始計算48小時</li>
+                                    </ul>
+                                    <div class="alert-box mt-3">
+                                        <h4 class="font-bold">重要注意事項</h4>
+                                        <p>此券僅限東京Metro與都營地下鐵使用，不適用於JR線、單軌電車、私鐵等其他交通工具。</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://www.tokyometro.jp/en/ticket/travel/index.html" target="_blank" class="disney-button">
+                                            <i class="fas fa-external-link-alt"></i> 官方網站
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2">涵蓋路線</h4>
+                                    <p class="mb-2">東京Metro (9條線)：</p>
+                                    <ul class="list-disc pl-6 space-y-1">
+                                        <li>銀座線、丸之內線、日比谷線</li>
+                                        <li>東西線、千代田線、有樂町線</li>
+                                        <li>半藏門線、南北線、副都心線</li>
+                                    </ul>
+                                    <p class="mt-2 mb-2">都營地下鐵 (4條線)：</p>
+                                    <ul class="list-disc pl-6 space-y-1">
+                                        <li>淺草線、三田線、新宿線、大江戶線</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">3. 迪士尼度假區交通</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-bold">迪士尼度假區線單軌電車</h4>
+                                    <p>連接舞濱站與迪士尼各飯店及樂園的交通工具。</p>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>票價：大人 260日圓/單程，兒童 130日圓/單程</li>
+                                        <li>營運時間：早上6:00至晚上12:00，約每10分鐘一班</li>
+                                    </ul>
+                                    <div class="mt-3">
+                                        <a href="https://www.tokyodisneyresort.jp/en/transportation/resort_line.html" target="_blank" class="disney-button">
+                                            <i class="fas fa-external-link-alt"></i> 詳細資訊
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">迪士尼度假區接駁巴士</h4>
+                                    <p>連接各迪士尼飯店的免費接駁巴士。</p>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>搭乘資格：迪士尼飯店住客</li>
+                                        <li>服務時間：早上6:00至晚上11:30，約每15-20分鐘一班</li>
+                                        <li>主要站點：各迪士尼飯店、Bayside Station、迪士尼樂園入口</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">4. 行李轉送服務</h3>
+                            <div>
+                                <p>迪士尼度假區內各飯店之間提供住客行李轉送服務，非常方便。</p>
+                                <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <li>服務費用：免費 (僅限迪士尼度假區內飯店之間轉送)</li>
+                                    <li>申請方式：Check-out 時向飯店前台申請</li>
+                                    <li>轉送時間：通常當天下午即可送達下一間飯店</li>
+                                </ul>
+                                <div class="tip-box mt-3">
+                                    <h4 class="font-bold">小貼士</h4>
+                                    <p>建議在行李中預留一個小背包，放入當天必要的物品，行李轉送期間可隨身攜帶。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hotel information -->
+                <section id="hotels" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800">住宿資訊</h2>
+
+                    <div class="space-y-8">
+                        <div class="hotel-card p-4 bg-gray-50 rounded-lg">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-bold text-blue-800">Akihabara Nakagawa Inn</h3>
+                                    <p class="text-sm text-gray-600">Day 1: 5/10</p>
+                                    <p>地址: 〒110-0005 Tokyo, Taito City, 3, 東京都 台東区上野5-3-7 ETビル</p>
+                                    <p>電話: +81 90-1219-8349</p>
+                                    <div class="mt-3 space-y-2">
+                                        <p><span class="font-bold">飯店特色:</span> 位於秋葉原附近的日式旅館，提供傳統的榻榻米房間，便利的位置讓您輕鬆探索秋葉原電器街。</p>
+                                        <p><span class="font-bold">房型:</span> 日式榻榻米房間，可容納家庭入住</p>
+                                        <p><span class="font-bold">設施:</span> 免費Wi-Fi、空調、衛浴設備、電熱水壺</p>
+                                        <p><span class="font-bold">交通:</span> 步行至秋葉原站約8分鐘，上野站約10分鐘</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://www.google.com/maps/search/Akihabara+Nakagawa+Inn/@35.6983333,139.7733333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4">
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h4 class="font-bold text-blue-800 mb-2">周邊設施</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>便利商店 (步行1分鐘)</li>
+                                            <li>秋葉原電器街 (步行8分鐘)</li>
+                                            <li>JR秋葉原站 (步行8分鐘)</li>
+                                            <li>阿美橫町商店街 (步行12分鐘)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card p-4 bg-gray-50 rounded-lg">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-bold text-blue-800">舞濱夢幻酒店別館 (Hotel Dream Gate Maihama Annex)</h3>
+                                    <p class="text-sm text-gray-600">Day 2: 5/11</p>
+                                    <p>地址: Japan, 〒279-0031 Chiba, Urayasu, Maihama, 26-5 ホテルドリームゲート舞浜アネックス</p>
+                                    <p>電話: +81 47-351-0180</p>
+                                    <div class="mt-3 space-y-2">
+                                        <p><span class="font-bold">飯店特色:</span> 位於舞濱站旁的現代化飯店，地理位置絕佳，前往東京迪士尼度假區極為便利。</p>
+                                        <p><span class="font-bold">房型:</span> 現代化西式客房，提供家庭房型</p>
+                                        <p><span class="font-bold">設施:</span> 免費Wi-Fi、空調、衛浴設備、電熱水壺、冰箱</p>
+                                        <p><span class="font-bold">交通:</span> 位於舞濱站旁，步行至迪士尼樂園約15分鐘，或搭乘單軌電車</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://maps.app.goo.gl/Nh1G8ZJDZnhZG2vC7" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.hdgm.jp/?utm_source=google&utm_medium=gbp&utm_campaign=websitelink_maihamaanex" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4">
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h4 class="font-bold text-blue-800 mb-2">周邊設施</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>舞濱站 (步行1分鐘)</li>
+                                            <li>伊克斯皮兒莉商場 (步行5分鐘)</li>
+                                            <li>迪士尼度假區單軌電車站 (步行3分鐘)</li>
+                                            <li>東京迪士尼樂園 (步行15分鐘)</li>
+                                            <li>便利商店 (步行2分鐘)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card p-4 bg-gray-50 rounded-lg">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-bold text-blue-800">東京迪士尼海洋夢幻泉鄉大飯店 (Tokyo DisneySea Fantasy Springs Hotel)</h3>
+                                    <p class="text-sm text-gray-600">Day 3: 5/12</p>
+                                    <p>地址: Japan, 〒279-8526 Chiba, Urayasu, Maihama, 1-2 東京ディズニーシー・ファンタジースプリングスホテル</p>
+                                    <p>電話: +81 47-305-8888</p>
+                                    <div class="mt-3 space-y-2">
+                                        <p><span class="font-bold">飯店特色:</span> 2024年新開幕的迪士尼主題豪華飯店，直接與迪士尼海洋的新園區「夢幻泉鄉」相連。</p>
+                                        <p><span class="font-bold">房型:</span> 豪華主題客房，每個房間都精心設計，融入迪士尼故事元素</p>
+                                        <p><span class="font-bold">設施:</span> 免費Wi-Fi、空調、豪華衛浴設備、迪士尼主題餐廳、禮品店</p>
+                                        <p><span class="font-bold">特別福利:</span> 享有提前入園權 (Happy Entry)，可提前15分鐘進入迪士尼海洋</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://maps.app.goo.gl/kDZJMfqcXJMTcAvy8" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.tokyodisneyresort.jp/hotel/fsh/" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4">
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h4 class="font-bold text-blue-800 mb-2">周邊設施</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>東京迪士尼海洋 (直接相連)</li>
+                                            <li>夢幻泉鄉園區 (專用入口)</li>
+                                            <li>迪士尼度假區單軌電車 Bayside Station (步行10分鐘)</li>
+                                            <li>飯店主題商店</li>
+                                            <li>飯店主題餐廳</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card p-4 bg-gray-50 rounded-lg">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-bold text-blue-800">東京迪士尼度假區玩具總動員飯店 (Tokyo DisneyResort Toy Story Hotel)</h3>
+                                    <p class="text-sm text-gray-600">Day 4: 5/13</p>
+                                    <p>地址: １-47 Maihama, Urayasu, Chiba 279-8506, Japan</p>
+                                    <p>電話: +81 47-305-5555</p>
+                                    <div class="mt-3 space-y-2">
+                                        <p><span class="font-bold">飯店特色:</span> 以迪士尼動畫《玩具總動員》為主題的飯店，處處可見玩具主題裝飾，讓您感覺自己變成玩具大小。</p>
+                                        <p><span class="font-bold">房型:</span> 玩具主題客房，裝飾充滿玩具總動員角色元素</p>
+                                        <p><span class="font-bold">設施:</span> 免費Wi-Fi、空調、衛浴設備、熊抱哥花園咖啡廳、玩具總動員主題商店</p>
+                                        <p><span class="font-bold">交通:</span> 提供至迪士尼樂園及海洋的免費接駁巴士</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://maps.app.goo.gl/FqUwUh49f5n5dGjA9" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.tokyodisneyresort.jp/en/hotel/tsh.html" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4">
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h4 class="font-bold text-blue-800 mb-2">周邊設施</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>迪士尼度假區單軌電車 Bayside Station (步行5分鐘)</li>
+                                            <li>Toy Friends Square (飯店內)</li>
+                                            <li>Gift Planet 玩具主題商店 (飯店內)</li>
+                                            <li>熊抱哥花園咖啡廳 (飯店內)</li>
+                                            <li>東京迪士尼樂園 (搭乘接駁車約10分鐘)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Attraction information -->
+                <section id="attractions" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-800">景點資訊</h2>
+
+                    <div class="space-y-8">
+                        <div class="attraction-card p-4 bg-gray-50 rounded-lg">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-bold text-blue-800">teamLab Borderless: MORI Building DIGITAL ART MUSEUM</h3>
+                                    <p>地址: Japan, 〒106-0041 Tokyo, Minato City, Toranomon, 5 Chome−９ Azabudai Hills Garden Plaza B, B1</p>
+                                    <p>電話: +81 3-6230-9666</p>
+                                    <p>營業時間: 上午9:00 - 晚上9:00</p>
+                                    <div class="mt-3 space-y-2">
+                                        <p><span class="font-bold">景點描述:</span> 沒有界限的沉浸式數位藝術博物館，結合光影與互動技術創造出超越現實的奇幻空間，是家庭必訪的視覺盛宴。</p>
+                                        <p><span class="font-bold">推薦體驗:</span> 無邊界之森、水晶世界、燈之森林、花與人等互動裝置</p>
+                                        <p><span class="font-bold">票價:</span> 大人 約3,500日圓，兒童 約1,500日圓 (請查閱官網最新價格)</p>
+                                        <p><span class="font-bold">注意事項:</span> 建議提前線上購票，部分展區可能有排隊等候</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://www.google.com/maps/search/MORI+Building+DIGITAL+ART+MUSEUM+teamLab+Borderless/@35.65,139.7,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.teamlab.art/jp/e/tokyo/" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4">
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h4 class="font-bold text-blue-800 mb-2">參觀小貼士</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>建議穿著淺色衣物，能更好地反映燈光效果</li>
+                                            <li>避免穿裙子，部分展區需走在不規則地面上</li>
+                                            <li>參觀時間約需2.5-3小時</li>
+                                            <li>設有寄物櫃，大型行李可寄存</li>
+                                            <li>展區內部分互動裝置需與其他觀眾共享</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attraction-card p-4 bg-gray-50 rounded-lg">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-bold text-blue-800">Maxell Aqua Park Shinagawa</h3>
+                                    <p>地址: Japan, 〒108-8611 Tokyo, Minato City, Takanawa, 4 Chome−１０−３０ 品川プリンスホテル内</p>
+                                    <p>電話: +81 3-5421-1111</p>
+                                    <p>營業時間: 上午10:00 - 晚上8:00</p>
+                                    <div class="mt-3 space-y-2">
+                                        <p><span class="font-bold">景點描述:</span> 結合聲光效果的現代化水族館，海豚表演極具觀賞性，適合全家欣賞。</p>
+                                        <p><span class="font-bold">推薦體驗:</span> 海豚表演秀、水母光影區、珊瑚礁海中隧道</p>
+                                        <p><span class="font-bold">票價:</span> 大人 約2,300日圓，兒童 約1,200日圓 (請查閱官網最新價格)</p>
+                                        <p><span class="font-bold">特色:</span> 結合燈光音效的海豚表演每日數場，非常精彩</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://www.google.com/maps/search/Maxell+Aqua+Park+Shinagawa/@35.6333333,139.8833333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.aqua-park.jp/en/aqua/index.html" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4">
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h4 class="font-bold text-blue-800 mb-2">海豚表演時間</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>平日: 11:00, 13:30, 15:30, 18:00</li>
+                                            <li>週末及假日: 11:00, 13:00, 15:00, 17:00, 19:00</li>
+                                            <li>表演時間約25分鐘</li>
+                                            <li>建議提早20分鐘前往佔位</li>
+                                            <li>前排座位可能會被濺濕，請注意保護電子設備</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attraction-card p-4 bg-gray-50 rounded-lg">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-bold text-blue-800">東京迪士尼樂園 (Tokyo Disneyland)</h3>
+                                    <p>地址: 1-1 Maihama, Urayasu, Chiba 279-0031, Japan</p>
+                                    <p>營業時間: 通常為上午9:00 - 晚上10:00 (依季節及日期變動)</p>
+                                    <div class="mt-3 space-y-2">
+                                        <p><span class="font-bold">景點描述:</span> 東京迪士尼度假區的第一個主題樂園，共有七個主題園區，提供各種經典迪士尼體驗。</p>
+                                        <p><span class="font-bold">主要園區:</span> 世界市集、探險樂園、西部樂園、動物天地、夢幻樂園、卡通城、明日樂園</p>
+                                        <p><span class="font-bold">推薦設施:</span> 美女與野獸「城堡奇緣」、小熊維尼獵蜜記、怪獸電力公司「迷藏巡遊車」、小飛俠天空之旅、小飛象</p>
+                                        <p><span class="font-bold">表演:</span> 東京迪士尼樂園電子大遊行～夢之光、迪士尼炫彩夜空煙火</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://maps.app.goo.gl/1CQV3tKW1ZYhwCJF6" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.tokyodisneyresort.jp/en/tdl/" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4">
+                                    <div class="bg-white p-3 rounded shadow-sm mb-3">
+                                        <h4 class="font-bold text-blue-800 mb-2">遊玩小貼士</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>善用迪士尼App中的預約等候卡系統</li>
+                                            <li>熱門設施可考慮購買迪士尼尊享卡</li>
+                                            <li>大型遊行前45分鐘開始找位置</li>
+                                            <li>平日人潮通常較少</li>
+                                            <li>開園後先衝夢幻樂園區域的熱門設施</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h4 class="font-bold text-blue-800 mb-2">推薦小吃</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>迪士尼特色爆米花</li>
+                                            <li>米奇造型麻糬饅頭</li>
+                                            <li>米奇冰淇淋三明治</li>
+                                            <li>咖哩飯 (動物天地)</li>
+                                            <li>火腿蛋包飯 (夢幻樂園)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attraction-card p-4 bg-gray-50 rounded-lg">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-bold text-blue-800">東京迪士尼海洋 (Tokyo DisneySea)</h3>
+                                    <p>地址: 1-13 Maihama, Urayasu, Chiba 279-8511, Japan</p>
+                                    <p>營業時間: 通常為上午9:00 - 晚上10:00 (依季節及日期變動)</p>
+                                    <div class="mt-3 space-y-2">
+                                        <p><span class="font-bold">景點描述:</span> 以海洋為主題的迪士尼樂園，擁有獨特的設計和刺激的遊樂設施</p>
+                                        <p><span class="font-bold">主要園區:</span> 神秘島、阿拉伯海岸、美人魚礁湖、地中海港灣、發現港、失落河三角洲、阿拉伯海岬、美人魚礁湖</p>
+                                        <p><span class="font-bold">推薦設施:</span> 海底兩萬哩、阿拉伯海盜船、美人魚礁湖海底世界、地中海港灣海豚秀、失落河三角洲海底探險、阿拉伯海岬海豚秀、美人魚礁湖海底世界</p>
+                                        <p><span class="font-bold">表演:</span> 東京迪士尼海洋電子大遊行～夢之光、迪士尼炫彩夜空煙火</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://www.google.com/maps/search/東京迪士尼海洋+Tokyo+DisneySea/@35.6333333,139.8833333,17z?entry=ttu" target="_blank" class="map-link">
+                                            <i class="fas fa-map-marker-alt"></i> 查看地圖位置
+                                        </a>
+                                        <div class="mt-2">
+                                            <a href="https://www.tokyodisneyresort.jp/en/tds/" target="_blank" class="disney-button">
+                                                <i class="fas fa-globe"></i> 官方網站
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4">
+                                    <div class="bg-white p-3 rounded shadow-sm mb-3">
+                                        <h4 class="font-bold text-blue-800 mb-2">遊玩小貼士</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>善用迪士尼App中的預約等候卡系統</li>
+                                            <li>熱門設施可考慮購買迪士尼尊享卡</li>
+                                            <li>大型遊行前45分鐘開始找位置</li>
+                                            <li>平日人潮通常較少</li>
+                                            <li>開園後先衝夢幻樂園區域的熱門設施</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h4 class="font-bold text-blue-800 mb-2">推薦小吃</h4>
+                                        <ul class="list-disc pl-6 space-y-1 text-sm">
+                                            <li>迪士尼特色爆米花</li>
+                                            <li>米奇造型麻糬饅頭</li>
+                                            <li>米奇冰淇淋三明治</li>
+                                            <li>咖哩飯 (動物天地)</li>
+                                            <li>火腿蛋包飯 (夢幻樂園)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        /* ... 所有 JavaScript 程式碼 ... */
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const menuButton = document.querySelector('.mobile-menu-button');
+    const closeButton = document.querySelector('.mobile-menu-close');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
+
+    closeButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Quick navigation dots functionality
+    const sections = document.querySelectorAll('section[id]');
+    const navDots = document.querySelectorAll('.quick-nav-dot');
+
+    function updateNavDots() {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                navDots[index].classList.add('active');
+            } else {
+                navDots[index].classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateNavDots);
+
+    navDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            sections[index].scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Floating action button functionality
+    const fab = document.querySelector('.fab');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            fab.style.display = 'block';
+        } else {
+            fab.style.display = 'none';
+        }
+    });
+
+    fab.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Loading indicator functionality
+    const loading = document.querySelector('.loading');
+    let isLoading = false;
+
+    function showLoading() {
+        if (!isLoading) {
+            loading.style.display = 'block';
+            isLoading = true;
+        }
+    }
+
+    function hideLoading() {
+        if (isLoading) {
+            loading.style.display = 'none';
+            isLoading = false;
+        }
+    }
+
+    // Show loading when navigating
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', () => {
+            showLoading();
+            setTimeout(hideLoading, 500);
+        });
+    });
+
+    // Table horizontal scroll indicators
+    const tables = document.querySelectorAll('table');
+    tables.forEach(table => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-wrapper relative';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+
+        if (table.scrollWidth > wrapper.clientWidth) {
+            wrapper.classList.add('has-scroll');
+        }
+    });
+
+    // Improve image loading
+    document.querySelectorAll('img').forEach(img => {
+        img.loading = 'lazy';
+    });
+});
 </script>
 </html>
